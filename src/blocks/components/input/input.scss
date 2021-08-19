@@ -1,0 +1,29 @@
+.input {
+    display: flex;
+    max-width: 450px;
+    margin: 0 auto;
+    width: 100%;
+    & + & {
+        margin-top: 12px;
+    }
+    &__input {
+        font-family: "Roboto";
+        font-size: 16px;
+        line-height: 19px;
+        padding: 13px 15px 12px;
+        display: block;
+        border-radius: 6px;
+        border: none;
+        outline: none;
+        margin-right: 0px;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.8);
+    }
+    &__input::placeholder {
+        font-family: "Roboto";
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 19px;
+        color: $font-black;
+    }
+}

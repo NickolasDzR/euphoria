@@ -1,0 +1,14 @@
+mixin nav(value = false)
+    +b.NAV.nav
+        +e.UL.list
+            if value.navigationListItems && value.navigationListItems.length > 0
+                each item, index in value.navigationListItems
+                    - var anchor = "#" + item[1]
+                    if index === 0
+                        +e.LI.item
+                            +e.A.link._active(href=anchor) #{item[0]}
+                    else
+                        +e.LI.item
+                            +e.A.link(href=anchor) #{item[0]}
+        +e.P.copypright   © 2021 Euphoria Corporation LTD
+

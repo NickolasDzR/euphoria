@@ -1,0 +1,59 @@
+extends layouts/default
+include helpers/mixins
+include ../blocks/components/btn/btn
+include ../blocks/components/preload/preload
+include ../blocks/components/hamburger/hamburger
+include ../blocks/modules/nav/nav
+include ../blocks/modules/title/title
+include ../blocks/modules/about/about
+include ../blocks/modules/social/social
+include ../blocks/modules/copyright/copyright
+
+block variables
+    -
+        var
+            title = "Euphoria"
+            navigationItems = [["About", "about"], ["How it works", "howItWorks"], ["Advantages", "advantages"], ["RoadMap", "roadMap"]]
+            socialIconsName = [["telegram"], ["fb"], ["twitter", "https://twitter.com/FinanceInka?s=09"], ["medium", "https://inkafinance-info.medium.com/"], ["github", "https://github.com/Inka-Finance"], ["linkedin"]]
+            inputs = [["Nickname", "text", "username"], ["Your email address", "email", "email"], ["Password (10 character minimum)", "password", "password"], ["Repeat password", "password", "password"]]
+
+block content
+    include ../../node_modules/bemto.pug/bemto.pug
+    +b.HEADER.header
+        .container.w-100
+            .row
+                +e.logo(src="img/content/logo.png" width="395" height="98")
+                +hamburger({
+                    parentClass: "header_hamburger"
+                })
+                +nav({
+                    navigationListItems: navigationItems,
+                })
+    +b.MAIN.main
+        +title({
+            heading: "Decentralized <span>P2P</span>",
+            subheading: "gaming platform",
+            text: "blockchain-powered platform which provides the users with a range of games, unlimited events and bets in cryptocurrency.",
+        })
+        +about({
+            heading: "What is Euphoria",
+            text: "Euphoria is a blockchain platform for card games that allows users to create games with their commission and play with other users."
+        })
+    //+b.FOOTER.footer
+    //    +icon({name: "logo-white", class: "footer__logo-mob"})
+    //    +social({
+    //        iconsName: socialIconsName,
+    //        elem: "footer__soc",
+    //    })
+    //    +copyright({
+    //        elem: "footer__copyright",
+    //    })
+    //    +e.reg
+    //        +e.P.reg-content INKA Finance Ltd registered in England and Wales with company number 13562357
+    .social-popup Coming soon
+    +preload
+
+block scripts
+    script(src="js/manifest.js")
+    script(src="js/vendor.js")
+    script(src="js/index.js")

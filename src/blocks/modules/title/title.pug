@@ -1,0 +1,22 @@
+mixin title(value = false)
+    +b.title
+        .container.h-full
+            .row.h-full.items-center.justify-center
+                +e.wrp
+                    +e.content
+                        +e.H1.heading !{value.heading}
+                        +e.P.subheading #{value.subheading}
+                        +e.P.text #{value.text}
+                        +e.button-wrp
+                            +btn({
+                                text: "download",
+                                mod: "purple",
+                                mod: "purple",
+                                elem: "button"
+                            })
+                            +btn({
+                                text: "whtelist",
+                                elem: "button"
+                            })
+                    +e.img-wrp
+                        +e.IMG.img(src="img/content/logo-big.png" srcset="img/content/logo-big@x2.png x2" )

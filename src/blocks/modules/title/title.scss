@@ -1,0 +1,104 @@
+.title {
+    height: 100vh;
+    &__wrp {
+        @include col();
+        @include size(12);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @media (min-width: $break_lg) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+    &__content {
+        order: 1;
+        @media (min-width: $break_lg) {
+            order: initial;
+        }
+    }
+
+    &__heading {
+        text-shadow: -4px -4px 16px rgba(147, 0, 160, 0.5), 10px 10px 16px rgba(0, 0, 0, 0.4);
+        font-size: 38px;
+        font-weight: bold;
+        color: #B903CB;
+        margin-bottom: 2px;
+        @media (min-width: $break_sm) {
+            font-size: 58px;
+        }
+        @media (min-width: $break_md) {
+            font-size: 76px;
+        }
+        @media (min-width: $break_lg) {
+            font-size: 58px;
+            text-shadow: -4px -4px 45px rgba(147, 0, 160, 0.5), 10px 10px 16px rgba(0, 0, 0, 0.4);
+            margin-bottom: 7px;
+        }
+        @media (min-width: $break_xl) {
+            font-size: 86px;
+            margin-bottom: 10px;
+        }
+        span {
+            color: $white;
+            text-shadow: none;
+        }
+    }
+    &__subheading {
+        font-family: $font-bebas;
+        font-size: 36px;
+        color: $white;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+        @media (min-width: $break_lg) {
+            margin-bottom: 12px;
+        }
+        @media (min-width: $break_xl) {
+            font-size: 49px;
+            line-height: 46px;
+            margin-bottom: 30px;
+        }
+    }
+    &__text {
+        color: $opacityWhite;
+        line-height: 20px;
+        margin-bottom: 15px;
+        max-width: 470px;
+        @media (min-width: $break_md) {
+            max-width: 510px;
+            font-size: 18px;
+        }
+        @media (min-width: $break_lg) {
+            font-size: 16px;
+        }
+        @media (min-width: $break_xl) {
+            max-width: 725px;
+            font-size: 24px;
+            line-height: 36px;
+            margin-bottom: 25px;
+        }
+    }
+    &__button-wrp {
+        display: flex;
+        justify-content: start;
+    }
+    &__button {
+        max-width: 250px;
+        & + & {
+            margin-left: 15px;
+        }
+    }
+    &__img {
+        width: 210px;
+        @media (min-width: $break_xs) {
+            width: 280px;
+        }
+        @media (min-width: $break_sm) {
+            width: 329px;
+        }
+        @media (min-width: $break_xl) {
+            width: 350px;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.button {
+    background: linear-gradient(275.46deg, #292330 0%, #1A171E 102%);
+    box-shadow: -10px -10px 25px rgba(71, 75, 79, 0.25), 10px 10px 15px rgba(0, 0, 0, 0.25), inset -0.5px -0.5px 0.5px #1D1822, inset 0.5px 0.5px 0.5px #585460;
+    transition: background .2s linear, color .2s linear;
+    border: none;
+    color: $white;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 15px;
+    text-transform: uppercase;
+    @media (min-width: $break_xl) {
+        padding: {
+            top: 24px;
+            bottom: 24px;
+        }
+        font-size: 18px;
+    }
+    &_purple {
+        background: linear-gradient(275.46deg, #C51ED3 0%, #790084 102%);;
+        transition: background .2s linear, color .2s linear;
+        box-shadow: -4px -4px 15px rgba(97, 1, 94, 0.8), 10px 10px 15px rgba(0, 0, 0, 0.25), inset -0.5px -0.5px 0.5px #770083, inset 0.5px 0.5px 0.5px #BF1BCD;;
+    }
+}

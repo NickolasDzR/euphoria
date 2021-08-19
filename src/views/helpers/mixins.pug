@@ -1,0 +1,67 @@
+mixin icon(value = false)
+    -
+        const
+            modifier = value.modifier ? value.class + '_' + value.name : ''
+            image = value.alt ? value.alt : false
+            height = value.height ? value.height : ""
+            width = value.width ? value.width : ""
+            id = value.id ? value.id : ""
+    if value.path
+        img(class= value.class, class=modifier, src=`img/svg/${value.name}.svg` width=width height=height id=id)
+    else
+        svg(class= value.class, class=modifier, viewbox=value.viewbox role=image ? "img" : image, aria-label=image)
+            use(xlink:href=`img/sprites/sprite.svg#${value.name}`)
+
+mixin picture(value = false)
+    -
+        const
+                imgClass = value.class ? value.class : false
+        const
+                imgModificator = value.modificator ? "__" + imgClass + "_" + value.modificator : false
+        const
+                sm = value.sm ? value.sm : false;
+        const
+                lg = value.lg ? value.lg : false;
+        const
+                md = value.md ? value.md : false;
+    picture
+        if lg
+            source(srcset=`img/content/${value.name}.webp 1x,
+                img/content/${value.name}@x2.webp 2x`
+                media="(min-width: 768px)"
+                type="image/webp"
+            )
+            source(srcset=`img/content/${value.name}.${value.format} 1x,
+                img/content/${value.name}@x2.${value.format} 2x`
+                media="(min-width: 768px)"
+            )
+        if md
+            source(srcset=`img/content/${value.name}-desk.webp 1x,
+                img/content/${value.name}-desk@x2.webp 2x`
+                media="(min-width: 768px)"
+                type="image/webp"
+        )
+        if sm
+            source(srcset=`img/content/${value.name}-desk.webp 1x,
+                img/content/${value.name}-desk@x2.webp 2x`
+                media="(min-width: 576px)"
+                type="image/webp"
+            )
+        if value.format
+            +e.IMG(class=imgClass class=imgModificator
+                srcset=`img/content/${value.name}@x2.webp 2x,
+                img/content/${value.name}.${value.format},
+                img/content/${value.name}@2.${value.format} x2`
+                src=`img/content/${value.name}.webp`
+                alt=value.alt
+                data=value.data
+                style=value.style
+            )
+        else
+            +e.IMG(class=imgClass class=imgModificator
+                srcset=`img/content/${value.name}@x2.webp 2x`
+                src=`img/content/${value.name}.webp`
+                alt=value.alt
+                data=value.data
+            )
+

@@ -1,0 +1,51 @@
+.about {
+    &__wrp {
+        @include col();
+        @include size(12);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media (min-width: $break_lg) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+    &__heading {
+        font-size: 38px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        @media (min-width: $break_lg) {
+            max-width: 490px;
+            text-align: left;
+            margin-right: 130px;
+            font-size: 50px;
+        }
+        @media (min-width: $break_xl) {
+            font-size: 60px;
+            margin-right: 228px;
+        }
+    }
+    &__text {
+        max-width: 470px;
+        color: $white;
+        line-height: 24px;
+        text-align: center;
+        @media (min-width: $break_md) {
+            max-width: 590px;
+            font-size: 18px;
+            line-height: 26px;
+        }
+        @media (min-width: $break_lg) {
+            text-align: left;
+            max-width: none;
+            font-size: 27px;
+            line-height: 34px;
+        }
+        @media (min-width: $break_xl) {
+            font-size: 37px;
+            line-height: 47px;
+            max-width: 1060px;
+        }
+    }
+}
