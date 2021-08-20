@@ -16,7 +16,13 @@ block variables
             navigationItems = [["About", "about"], ["How it works", "howItWorks"], ["Advantages", "advantages"], ["RoadMap", "roadMap"]]
             socialIconsName = [["telegram"], ["fb"], ["twitter", "https://twitter.com/FinanceInka?s=09"], ["medium", "https://inkafinance-info.medium.com/"], ["github", "https://github.com/Inka-Finance"], ["linkedin"]]
             inputs = [["Nickname", "text", "username"], ["Your email address", "email", "email"], ["Password (10 character minimum)", "password", "password"], ["Repeat password", "password", "password"]]
-
+            about = [
+                {
+                    title: "Defi Services",
+                    img: "defi",
+                    listItems: ["Transparent, immutable, and cryptographically verifiable.", ["Large hybrid datasets (like payout schedules and token bonding curves)."], "Web3 based “all-in-one” experience for unified data management."]
+                }
+            ]
 block content
     include ../../node_modules/bemto.pug/bemto.pug
     +b.HEADER.header
@@ -33,11 +39,12 @@ block content
         +title({
             heading: "Decentralized <span>P2P</span>",
             subheading: "gaming platform",
-            text: "blockchain-powered platform which provides the users with a range of games, unlimited events and bets in cryptocurrency.",
+            text: "Blockchain-powered platform which provides the users with a range of games, unlimited events and bets in cryptocurrency.",
         })
         +about({
             heading: "What is Euphoria",
-            text: "Euphoria is a blockchain platform for card games that allows users to create games with their commission and play with other users."
+            text: "Euphoria is a blockchain platform for card games that allows users to create games with their commission and play with other users.",
+            items: about,
         })
     //+b.FOOTER.footer
     //    +icon({name: "logo-white", class: "footer__logo-mob"})

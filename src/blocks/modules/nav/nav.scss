@@ -36,7 +36,7 @@ $staticNavigationMediaBreak: $break_md;
         visibility: visible;
         pointer-events: auto;
     }
-    @media (min-width: $break_md) {
+    @media (min-width: $break_lg) {
         background-color: inherit;
     }
 
@@ -85,28 +85,14 @@ $staticNavigationMediaBreak: $break_md;
         }
 
         &:nth-child(1) {
-            @media (min-width: $break_md) {
+            @media (min-width: $break_lg) {
                 margin-top: 0;
             }
         }
-
-        //&:not(:last-of-type) .nav__link:after {
-        //    content: "";
-        //    width: calc(100% - 30px);
-        //    position: absolute;
-        //    bottom: 0;
-        //    left: 15px;
-        //    height: 1px;
-        //    background-color: #E3E3E3;
-        //    transition: transform .1s linear;
-        //    @media (min-width: $break_md) {
-        //        display: none;
-        //    }
-        //}
     }
 
     &__item + &__item {
-        @media (min-width: $break_md) {
+        @media (min-width: $break_lg) {
             border: none;
         }
     }
@@ -120,6 +106,12 @@ $staticNavigationMediaBreak: $break_md;
         font-size: 18px;
         color: $white;
         @media (min-width: $break_md) {
+            font-size: 16px;
+            line-height: 24px;
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+        @media (min-width: $break_md) {
             border-top: 5px solid transparent;
             transform: translateZ(0);
             padding: {
@@ -127,16 +119,16 @@ $staticNavigationMediaBreak: $break_md;
                 left: 15px;
             }
         }
-        @media (min-width: $break_lg) {
+        @media (min-width: $break_xl) {
             padding: {
                 right: 24px;
                 left: 24px;
             }
         }
-        @media (min-width: $break_xl) {
+        @media (min-width: $break_xxl) {
             padding: {
-                right: 44px;
-                left: 44px;
+                right: 36px;
+                left: 36px;
             }
         }
 
@@ -207,7 +199,7 @@ $staticNavigationMediaBreak: $break_md;
         font-weight: normal;
         font-size: 16px;
         line-height: 150%;
-        color: $font-black;
+        color: $white;
         opacity: 0;
         transition: opacity .1s linear;
 
@@ -218,6 +210,9 @@ $staticNavigationMediaBreak: $break_md;
         margin-right: auto;
         text-align: center;
         @media (min-width: $break_md) {
+            display: none;
+        }
+        @media (min-width: $break_xl) {
             display: none;
         }
     }

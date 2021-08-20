@@ -9,6 +9,7 @@ $break_md: 767px;
 $break_lg: 992px;
 $break_xl: 1280px;
 $break_xxl: 1440px;
+$break_x: 1660px;
 
 $offset: 30px;
 $offset_xs: $offset;
@@ -42,7 +43,7 @@ $fields: 15px;
 }
 
 @mixin container(){
-    max-width: 1440px;
+    max-width: 1660px;
     margin: 0 auto;
     @include container-full();
 }
@@ -360,6 +361,12 @@ $fields: 15px;
 
 @mixin xxl($name, $value){
     @media screen and (min-width: $break_xxl){
+        #{$name}: $value;
+    }
+}
+
+@mixin x($name, $value){
+    @media screen and (min-width: $break_x){
         #{$name}: $value;
     }
 }
