@@ -1,6 +1,11 @@
 import scrollLock from 'scroll-lock';
 // import jump from 'jump.js'
-//
+
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 const hamburger = document.querySelector(".hamburger"),
     nav = document.querySelector(".nav"),
     navLink = nav.querySelectorAll(".nav__link"),
@@ -32,6 +37,24 @@ navLink.forEach((el) => {
 hamburger.addEventListener("click", (e) => {
     navHandler(e);
 });
+
+const navTl = gsap.timeline({
+    delay: 0.5,
+    scrub: 1,
+})
+
+navTl.from(".header__logo", {
+    duration: 0.5,
+    opacity: 0,
+    ease: "power3",
+});
+
+// navTl.from(".nav__item", {
+//     duration: 1,
+//     opacity: 0,
+//     ease: "power3",
+// });
+
 //
 // let scrollPosition = window.pageYOffset;
 // let setTimeoutDeleteClass = undefined;

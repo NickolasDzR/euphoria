@@ -23,4 +23,9 @@
         transition: background .2s linear, color .2s linear;
         box-shadow: -4px -4px 15px rgba(97, 1, 94, 0.8), 10px 10px 15px rgba(0, 0, 0, 0.25), inset -0.5px -0.5px 0.5px #770083, inset 0.5px 0.5px 0.5px #BF1BCD;;
     }
+    &_border-radius {
+        &_small {
+            border-radius: 7px;
+        }
+    }
 }

@@ -1,0 +1,32 @@
+mixin howto(value = false)
+    +b.howto
+        .container
+            .row
+                +e.wrp
+                    +e.heading-wrp
+                        +e.H2.heading.about__heading #{value.heading}
+                        +btn({
+                            text: "lite paper",
+                            mod: "purple _border-radius_small",
+                            elem: "button"
+                        })
+                    +e.P.text.about__text   #{value.text}
+                +e.items
+                    each val, index in value.items
+                        - var static = val.static ? "" : "_animation"
+                        +e.item(class=static)
+                            +e.item-title
+                                +e.H2.item-heading #{val.heading}
+                                +e.P.item-text.about__text #{val.text}
+                            +e.item-content
+                                +e.line
+                                +e.UL.item-list
+                                    each item, k in val.item
+                                        +e.LI.item-element
+                                            +e.number
+                                            +e.item-content-wrp
+                                                +e.P.step Step
+                                                +e.P.title #{item.title}
+                                                - var imgClassName = item.imgClassName ? "_" + item.imgClassName : ""
+                                                +e.IMG.img(class=imgClassName src='img/content/' + item.imgName + '.webp' srcset='img/content/' + item.imgName + '@x2.webp')
+

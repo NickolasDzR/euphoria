@@ -6,23 +6,162 @@ include ../blocks/components/hamburger/hamburger
 include ../blocks/modules/nav/nav
 include ../blocks/modules/title/title
 include ../blocks/modules/about/about
+include ../blocks/modules/howto/howto
+include ../blocks/modules/advantages/advantages
+include ../blocks/modules/roadmap/roadmap
 include ../blocks/modules/social/social
 include ../blocks/modules/copyright/copyright
 
 block variables
     -
         var
-            title = "Euphoria"
-            navigationItems = [["About", "about"], ["How it works", "howItWorks"], ["Advantages", "advantages"], ["RoadMap", "roadMap"]]
-            socialIconsName = [["telegram"], ["fb"], ["twitter", "https://twitter.com/FinanceInka?s=09"], ["medium", "https://inkafinance-info.medium.com/"], ["github", "https://github.com/Inka-Finance"], ["linkedin"]]
-            inputs = [["Nickname", "text", "username"], ["Your email address", "email", "email"], ["Password (10 character minimum)", "password", "password"], ["Repeat password", "password", "password"]]
-            about = [
-                {
-                    title: "Defi Services",
-                    img: "defi",
-                    listItems: ["Transparent, immutable, and cryptographically verifiable.", ["Large hybrid datasets (like payout schedules and token bonding curves)."], "Web3 based “all-in-one” experience for unified data management."]
-                }
-            ]
+                title = "Euphoria"
+        navigationItems = [["About", "about"], ["How it works", "howItWorks"], ["Advantages", "advantages"], ["RoadMap", "roadMap"]]
+        socialIconsName = [["telegram"], ["fb"], ["twitter", "https://twitter.com/FinanceInka?s=09"], ["medium", "https://inkafinance-info.medium.com/"], ["github", "https://github.com/Inka-Finance"], ["linkedin"]]
+        inputs = [["Nickname", "text", "username"], ["Your email address", "email", "email"], ["Password (10 character minimum)", "password", "password"], ["Repeat password", "password", "password"]]
+        about = [{
+            title: "Defi Services",
+            img: "defi",
+            listItems: ["Transparent, immutable, and cryptographically verifiable.", ["Large hybrid datasets (like payout schedules and token bonding curves)."], "Web3 based “all-in-one” experience for unified data management."]
+        },
+            {
+                title: "NFT Support",
+                img: "nft-support",
+                listItems: ["Built-in option to tokenize any uploaded file.", "Use ERC-721 or ERC-1115 NFT standard.", "Universal Digital Asset Storage for any NFT marketplace."],
+                reverse: true,
+            },
+            {
+                title: "Blockchain",
+                img: "blockchain",
+                listItems: ["Elimination of intermediaries makes transactions faster than in conventional methods. ", "The enhanced security, which prevents fraud and unauthorized activity.", "Decentralized nature, which creates trust between parties."]
+            },
+            {
+                title: "Betting",
+                img: "betting",
+                listItems: ["Placement of bets on any type of event.", "No limits on making bets.", "Commision is set by the user."],
+                reverse: true,
+            },
+            {
+                title: "Card-games",
+                img: "card-games",
+                listItems: ["DeFi games with transparent algorithm.", "Minimum platform commision, which is only 2%.", "Minimum platform commision, which is only 2%."]
+            }]
+        howto = [
+            {
+                heading: "Poker",
+                text: "The Euphoria app confidently positions itself as universal due to the fact that it includes not only games, but also a wallet with its own token. Games such as Baccarat and Poker are available currently.",
+                item: [
+                    {
+                        title: "At first Player create room",
+                        imgName: "button"
+                    },
+                    {
+                        title: "Player A creates the poker room and sets the comission.",
+                        imgName: "poker-setting"
+                    },
+                    {
+                        title: "Player A also can choose the type of the room.",
+                        imgName: "type-room"
+                    },
+                    {
+                        title: "Finally, the gamers join the room and start to play.",
+                        imgName: "poker-table"
+                    }
+                ]
+            },
+            {
+                heading: "Betting",
+                text: "The Euphoria app confidently positions itself as universal due to the fact that it includes not only games, but also a wallet with its own token. Games such as Baccarat and Poker are available currently.",
+                item: [
+                    {
+                        title: "At first Player create room",
+                        imgName: "button"
+                    },
+                    {
+                        title: "Player B creates the event and sets the coefficient.",
+                        imgName: "coefficient"
+                    },
+                    {
+                        title: "Smart contract.",
+                        imgName: "task-blanket"
+                    },
+                    {
+                        title: "Chainlink",
+                        imgName: "chainlink",
+                        imgClassName: "chainlink"
+                    },
+                    {
+                        title: "It remains to collect your winnings.",
+                        imgName: "winning-res-chat"
+                    }
+                ]
+            },
+            {
+                heading: "event predictions",
+                text: "The Euphoria app confidently positions itself as universal due to the fact that it includes not only games, but also a wallet with its own token. Games such as Baccarat and Poker are available currently.",
+                static: true,
+                item: [
+                    {
+                        title: "At first Player create event.",
+                        imgName: "button"
+                    },
+                    {
+                        title: "You can create any kind of event for the game or participate in existing bets.",
+                        imgName: "messages"
+                    },
+                ]
+            }
+        ]
+        advantages = [
+            {
+                img: "gamepad",
+                title: "Blockchain",
+                text: "Uncovered algorithms for exciting blockchain games."
+            },
+            {
+                img: "pica",
+                title: "Easy",
+                text: "No limits on bets and events."
+            },
+            {
+                img: "people",
+                title: "Simply",
+                text: "Unlimited number of events."
+            },
+            {
+                img: "percent",
+                title: "Profitable",
+                text: "There is no hidden margin or fees."
+            },
+            {
+                img: "dollar",
+                title: "Benefit",
+                text: "The ability to earn on winnings and on the stack in the pool."
+            },
+        ],
+        slides = [
+            {
+                title: "now",
+                items: ["Opening of the whitelist", "Crypto Wallet", "Baccarat", "Creating card games", "Creating a player profile", "Listing Pancakeswap", "Audit Certik"]
+            },
+            {
+                title: "Q1",
+                items: ["Poker", "User rating", "Creating Chats", "Adding the prediction platform (sports, politics, etc.)",]
+            },
+            {
+                title: "Q2",
+                items: ["Creating a message", "Adding NFT (tickets) ", "Adding Black Jack", "Improvement of the poker platform", "Adding the different kind of poker", "Improvement of predictions, adding bets on the specific player in card games"]
+            },
+            {
+                title: "Q3",
+                items: ["Improvement of the platform for games (hilo etc.)", "Update of the prediction of market", "Expansion of card games", "Creating own tournaments",]
+            },
+            {
+                title: "Q4",
+                items: ["Bets in NFT", "Improvement card games: hilo, poker , blackjack, etc.", "Creating achieve", "Improvement rating", "User rating algorithm", "Decentralized p2p sale and purchases NFT"]
+            },
+        ]
+
 block content
     include ../../node_modules/bemto.pug/bemto.pug
     +b.HEADER.header
@@ -45,6 +184,18 @@ block content
             heading: "What is Euphoria",
             text: "Euphoria is a blockchain platform for card games that allows users to create games with their commission and play with other users.",
             items: about,
+        })
+        +howto({
+            heading: "How it works",
+            text: "The Euphoria app confidently positions itself as universal due to the fact that it includes not only games, but also a wallet with its own token. Games such as Baccarat and Poker are available currently.",
+            items: howto,
+        })
+        +advantages({
+            heading: "Our advantages",
+            items: advantages,
+        })
+        +roadmap({
+            slides: slides,
         })
     //+b.FOOTER.footer
     //    +icon({name: "logo-white", class: "footer__logo-mob"})

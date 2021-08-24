@@ -7,12 +7,12 @@ mixin about(value = false)
                     +e.P.text !{value.text}
                 +e.items
                     each val, i in value.items
-                        if !value.reverse
-                            +e.item
-                                +e.P.title #{val.title}
-                                +e.content
-                                    +e.IMG.img(src="img/content/" + val.img + ".png" srcset="img/content/" + val.img + "@x2.png 2x")
-                                    +e.UL.list
-                                        each item, k in val.listItems
-                                            +e.LI.list-item
-                                                +e.P.list-text #{item}
+                        - var reverse = val.reverse ? "_reverse" : "";
+                        +e.item(class=reverse)
+                            +e.P.title #{val.title}
+                            +e.content
+                                +e.IMG.img(src="img/content/" + val.img + ".png" srcset="img/content/" + val.img + "@x2.png 2x")
+                                +e.UL.list
+                                    each item, k in val.listItems
+                                        +e.LI.list-item
+                                            +e.P.list-text #{item}

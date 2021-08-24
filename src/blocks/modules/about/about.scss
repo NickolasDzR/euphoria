@@ -14,6 +14,7 @@
             margin-bottom: 122px;
         }
     }
+
     &__heading {
         font-size: 38px;
         font-weight: bold;
@@ -30,6 +31,7 @@
             margin-right: 228px;
         }
     }
+
     &__text {
         max-width: 470px;
         color: $white;
@@ -52,13 +54,19 @@
             max-width: 1060px;
         }
     }
+
     &__items {
         @include col();
         @include size(12);
     }
+
     &__item {
         margin-bottom: 100px;
+        @media (min-width: $break_xl) {
+            margin-bottom: 217px;
+        }
     }
+
     &__title {
         font-size: 32px;
         font-weight: 500;
@@ -79,6 +87,7 @@
             line-height: 50px;
         }
     }
+
     &__content {
         display: flex;
         flex-direction: column;
@@ -89,6 +98,7 @@
             justify-content: space-between;
         }
     }
+
     &__img {
         max-width: 320px;
         height: auto;
@@ -110,6 +120,7 @@
             max-width: 444px;
         }
     }
+
     &__list {
         counter-reset: about-list;
         position: relative;
@@ -126,6 +137,7 @@
         @media (min-width: $break_xxl) {
             margin-left: 149px;
         }
+
         &::before {
             content: "";
             display: block;
@@ -153,6 +165,7 @@
             }
         }
     }
+
     &__list-item {
         margin-bottom: 10px;
         padding-left: 20px;
@@ -161,6 +174,7 @@
             margin-bottom: 50px;
             padding-left: 35px;
         }
+
         &::before {
             counter-increment: about-list;
             content: "0" counter(about-list);
@@ -177,6 +191,7 @@
             }
         }
     }
+
     &__list-text {
         color: $white;
         font-size: 16px;
@@ -195,6 +210,42 @@
         @media (min-width: $break_x) {
             font-size: 32px;
             line-height: 40px;
+        }
+    }
+}
+
+.about__item_reverse {
+    .about__content {
+        @media (min-width: $break_lg) {
+            flex-flow: row-reverse;
+        }
+    }
+
+    .about__list {
+        @media (min-width: $break_lg) {
+            margin-right: 130px;
+            margin-left: 0;
+        }
+        @media (min-width: $break_xl) {
+            margin-right: 139px;
+            margin-left: 0;
+        }
+        @media (min-width: $break_xxl) {
+            margin-right: 149px;
+            margin-left: 0;
+        }
+
+        &::before {
+            right: 47%;
+            left: auto;
+            @media (min-width: $break_lg) {
+                right: -39px;
+                left: auto;
+            }
+            @media (min-width: $break_xxl) {
+                right: -60px;
+                left: auto;
+            }
         }
     }
 }

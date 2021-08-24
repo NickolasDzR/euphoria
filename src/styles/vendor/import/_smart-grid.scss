@@ -113,6 +113,16 @@ $fields: 15px;
     @include xl(width, #{calc(#{$val} - #{$offset_xl})});
 }
 
+@mixin size-xxl($n){
+    $val: math.div(100%, $columns) * $n;
+    @include xxl(width, #{calc(#{$val} - #{$offset_xl})});
+}
+
+@mixin size-x($n){
+    $val: math.div(100%, $columns) * $n;
+    @include x(width, #{calc(#{$val} - #{$offset_xl})});
+}
+
 @mixin shift($n){
     $val: math.div(100%, $columns) * $n;
     margin-left: #{calc(#{$val} + #{$offset_one_side})};

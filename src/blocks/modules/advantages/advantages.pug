@@ -1,0 +1,16 @@
+mixin advantages(value = false)
+    +b.advantages
+        .container
+            .row
+                +e.wrp
+                    +e.H2.heading #{value.heading}
+                    +e.UL.list
+                        each val, i in value.items
+                            +e.LI.item
+                                +e.ball
+                                    +icon({
+                                        name: val.img,
+                                    })
+                                +e.content-wrp
+                                    +e.P.title #{val.title}
+                                    +e.P.text #{val.text}

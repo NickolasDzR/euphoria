@@ -1,0 +1,85 @@
+.advantages {
+    margin-bottom: 150px;
+    &__wrp {
+        @include col();
+        @include size(12);
+        @media (min-width: $break_lg) {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+    }
+    &__heading {
+        margin-bottom: 55px;
+        @media (min-width: $break_lg) {
+            text-align: left;
+            font-size: 46px;
+            line-height: 50px;
+            @include col();
+            @include size(4);
+        }
+        @media (min-width: $break_xl) {
+            margin-right: 60px;
+            font-size: 54px;
+        }
+        @media (min-width: $break_x) {
+            @include size(5);
+        }
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__ball {
+        @extend .howto__number;
+        position: relative;
+        left: auto;
+        margin-right: 22px;
+        padding: 18px;
+        &::before {
+            content: none;
+        }
+        @media (min-width: $break_xl) {
+            padding: 26px;
+        }
+    }
+    &__content-wrp {
+        max-width: 285px;
+    }
+    &__title {
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 22px;
+        color: $white;
+        margin-bottom: 5px;
+        @media (min-width: $break_xxl) {
+            font-size: 28px;
+            line-height: 32px;
+        }
+    }
+    &__text {
+        font-size: 16px;
+        line-height: 20px;
+        color: $white;
+        @media (min-width: $break_xxl) {
+            font-size: 24px;
+            line-height: 28px;
+        }
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        & + & {
+            margin-top: 50px;
+            @media (min-width: $break_md) {
+                margin-top: 0;
+            }
+        }
+        @media (min-width: $break_md) {
+            @include col();
+            @include size(6);
+            align-items: center;
+            margin-bottom: 50px;
+        }
+    }
+}

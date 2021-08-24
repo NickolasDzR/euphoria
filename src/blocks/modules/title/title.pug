@@ -4,10 +4,10 @@ mixin title(value = false)
             .row.h-full.items-center.justify-center
                 +e.wrp
                     +e.content
-                        +e.H1.heading !{value.heading}
-                        +e.P.subheading #{value.subheading}
-                        +e.P.text #{value.text}
-                        +e.button-wrp
+                        +e.H1.heading(data-title) !{value.heading}
+                        +e.P.subheading(data-title) #{value.subheading}
+                        +e.P.text(data-title) #{value.text}
+                        +e.button-wrp(data-title)
                             +btn({
                                 text: "download",
                                 mod: "purple",

@@ -1,0 +1,155 @@
+.roadmap {
+    height: 100vh;
+
+    .container {
+        padding: 0;
+    }
+
+    .row {
+        margin: 0;
+    }
+
+    &__splide {
+        //@include col();
+        //@include size(12);
+        width: 100%;
+    }
+
+    &__title {
+        font-family: $font-monts;
+        font-size: 44px;
+        font-weight: bold;
+        line-height: 48px;
+        color: $white;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+
+    &__text {
+        font-family: $font-baloo;
+        color: $white;
+        font-size: 18px;
+        line-height: 20px;
+        @media (min-width: $break_xl) {
+            font-size: 14px;
+            line-height: 16px;
+        }
+    }
+
+    &__item-slide {
+        padding-left: 20px;
+        position: relative;
+        //margin-bottom: 5px;
+
+        margin-bottom: 10px;
+
+        &::before {
+            content: "";
+            background: linear-gradient(143.34deg, #990094 21.33%, #61015E 64.16%);
+            width: 7px;
+            height: 7px;
+            position: absolute;
+            top: 50%;
+            bottom: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            border-radius: 59%;
+        }
+    }
+
+    &__slide {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        position: relative;
+        padding-bottom: 70px;
+        &_bottom {
+            margin-top: 30%;
+        }
+    }
+
+    &__line-wrp {
+        display: flex;
+        align-items: flex-start;
+        z-index: 1;
+
+        position: relative;
+        top: -20px;
+        @media (min-width: $break_xl) {
+            background: linear-gradient(180deg, #9F19AB 0%, #D1B4E3 33.12%, #61015E 66.46%, rgba(209, 180, 227, 0) 100%);
+            width: 3px;
+            height: 320px;
+
+            top: 0;
+            position: absolute;
+            left: 19px;
+        }
+
+        &_btn {
+            align-items: flex-end;
+        }
+    }
+
+    &__union {
+        min-width: 100.7%;
+        vertical-align: baseline;
+        opacity: 0.6;
+        position: relative;
+        @media (min-width: $break_xl) {
+            display: none;
+        }
+    }
+
+    &__content-wrp {
+        padding: 0 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        z-index: 2;
+        height: 310px;
+        @media (min-width: $break_xl) {
+            padding-left: 40px;
+            justify-content: center;
+        }
+        &_bottom {
+            position: relative;
+        }
+    }
+
+    &__title {
+        max-width: 185px;
+        width: 100%;
+        text-align: left;
+    }
+
+    &__item-list {
+        @extend .roadmap__title;
+    }
+
+    .splide__pagination li {
+        margin: 0 5px
+    }
+
+    &__list {
+        @media (min-width: $break_xl) {
+            display: flex;
+            align-items: flex-start;
+            height: 760px;
+            &::before {
+                content: "";
+                background-image: url("../img/svg/union-full.svg");
+                display: block;
+                background-repeat: no-repeat;
+                background-size: 100%;
+                background-position: top;
+                width: 100vw;
+                height: 78px;
+                position: absolute;
+                top: 47%;
+                bottom: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+}

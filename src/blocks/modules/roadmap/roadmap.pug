@@ -1,0 +1,17 @@
+mixin roadmap(value = false)
+    +b.roadmap
+        +e.splide.splide
+            +e.track.splide__track
+                +e.UL.list.splide__list
+                    each val, i in value.slides
+                        +e.LI.slide(class= i % 2 === 0 ? "" : "_bottom").splide__slide
+                            +e.content-wrp(class= i % 2 === 0 ? "" : "_bottom")
+                                +e.P.title #{val.title}
+                                +e.UL.item-list
+                                    each slide, index in val.items
+                                        +e.LI.item-slide
+                                            +e.P.text #{slide}
+                            - var imageType = i % 2 === 0 ? "union-bottom" : "union-top"
+                            - var lineType = i % 2 === 0 ? "" : "_btn"
+                            +e.line-wrp(class=lineType)
+                                +e.IMG.union_top(src="img/content/" + imageType + ".png")
