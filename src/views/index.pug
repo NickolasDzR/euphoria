@@ -17,7 +17,7 @@ block variables
         var
                 title = "Euphoria"
         navigationItems = [["About", "about"], ["How it works", "howItWorks"], ["Advantages", "advantages"], ["RoadMap", "roadMap"]]
-        socialIconsName = [["telegram"], ["fb"], ["twitter", "https://twitter.com/FinanceInka?s=09"], ["medium", "https://inkafinance-info.medium.com/"], ["github", "https://github.com/Inka-Finance"], ["linkedin"]]
+        socialIconsName = [["tl"], ["fb"], ["tw"], ["tt"]]
         inputs = [["Nickname", "text", "username"], ["Your email address", "email", "email"], ["Password (10 character minimum)", "password", "password"], ["Repeat password", "password", "password"]]
         about = [{
             title: "Defi Services",
@@ -197,17 +197,15 @@ block content
         +roadmap({
             slides: slides,
         })
-    //+b.FOOTER.footer
-    //    +icon({name: "logo-white", class: "footer__logo-mob"})
-    //    +social({
-    //        iconsName: socialIconsName,
-    //        elem: "footer__soc",
-    //    })
-    //    +copyright({
-    //        elem: "footer__copyright",
-    //    })
-    //    +e.reg
-    //        +e.P.reg-content INKA Finance Ltd registered in England and Wales with company number 13562357
+    +b.FOOTER.footer
+        +e.P.message Receive our Newsletter
+        +social({
+            iconsName: socialIconsName,
+            elem: "footer__soc",
+        })
+        +copyright({
+            elem: "footer__copyright",
+        })
     .social-popup Coming soon
     +preload
 

@@ -56,45 +56,45 @@ navTl.from(".header__logo", {
 // });
 
 //
-// let scrollPosition = window.pageYOffset;
-// let setTimeoutDeleteClass = undefined;
-//
-// const deleteClassWithTime = (elem) => {
-//     console.log(header.classList.contains("header_hovered"));
-//     if (!header.classList.contains("header_hovered") && !elem.classList.contains("header_hidden") && setTimeoutDeleteClass !== undefined) {
-//         setTimeoutDeleteClass = setTimeout(() => {
-//             elem.classList.add("header_hidden");
-//             setTimeoutDeleteClass = undefined;
-//         }, 3000);
-//         return false;
-//     }
-// }
-//
-// let header = document.querySelector(".header");
-// const navigation = document.querySelector(".nav");
-// let oldPositionScroll = 0;
-//
-// const navBarPosition = () => {
-//     oldPositionScroll = scrollY;
-//
-//     header = document.querySelector(".header");
-//     if (scrollY > 40 && !navigation.classList.contains("nav_active")) {
-//         header.classList.add("header_hidden");
-//     } else {
-//         header.classList.remove("header_hidden");
-//     }
-//
-//     if (scrollPosition > window.pageYOffset) {
-//         header.classList.remove("header_hidden");
-//     }
-//
-//     scrollPosition = window.pageYOffset;
-//     // deleteClassWithTime(header);
-// };
-//
-// window.addEventListener("scroll", navBarPosition);
-//
-// navBarPosition();
+let scrollPosition = window.pageYOffset;
+let setTimeoutDeleteClass = undefined;
+
+const deleteClassWithTime = (elem) => {
+    console.log(header.classList.contains("header_hovered"));
+    if (!header.classList.contains("header_hovered") && !elem.classList.contains("header_hidden") && setTimeoutDeleteClass !== undefined) {
+        setTimeoutDeleteClass = setTimeout(() => {
+            elem.classList.add("header_hidden");
+            setTimeoutDeleteClass = undefined;
+        }, 3000);
+        return false;
+    }
+}
+
+let header = document.querySelector(".header");
+const navigation = document.querySelector(".nav");
+let oldPositionScroll = 0;
+
+const navBarPosition = () => {
+    oldPositionScroll = scrollY;
+
+    header = document.querySelector(".header");
+    if (scrollY > 40 && !navigation.classList.contains("nav_active")) {
+        header.classList.add("header_hidden");
+    } else {
+        header.classList.remove("header_hidden");
+    }
+
+    if (scrollPosition > window.pageYOffset) {
+        header.classList.remove("header_hidden");
+    }
+
+    scrollPosition = window.pageYOffset;
+    // deleteClassWithTime(header);
+};
+
+window.addEventListener("scroll", navBarPosition);
+
+navBarPosition();
 //
 // // header.addEventListener("mouseover", () => {
 // //     if (!header.classList.contains("header_hovered")) {

@@ -1,14 +1,17 @@
 .input {
     display: flex;
-    max-width: 450px;
     margin: 0 auto;
     width: 100%;
     & + & {
         margin-top: 12px;
+        @media (min-width: $break_xl) {
+            margin-top: 20px;
+        }
     }
     &__input {
         font-family: "Roboto";
         font-size: 16px;
+        color: rgba(255, 255, 255, 0.9);
         line-height: 19px;
         padding: 13px 15px 12px;
         display: block;
@@ -17,13 +20,25 @@
         outline: none;
         margin-right: 0px;
         width: 100%;
-        background: rgba(255, 255, 255, 0.8);
+        background: #44003F;
+        @media (min-width: $break_lg) {
+            font-size: 20px;
+            line-height: 30px;
+        }
+        @media (min-width: $break_xl) {
+            font-size: 22px;
+            line-height: 30px;
+        }
     }
     &__input::placeholder {
         font-family: "Roboto";
         font-size: 16px;
         font-weight: 300;
         line-height: 19px;
-        color: $font-black;
+        color: rgba(255, 255, 255, 0.6);
+        @media (min-width: $break_lg) {
+            font-size: 20px;
+            line-height: 30px;
+        }
     }
 }

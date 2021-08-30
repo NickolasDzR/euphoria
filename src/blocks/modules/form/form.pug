@@ -1,0 +1,39 @@
+mixin form(value = false)
+    +b.FORM.form
+        +e.title Registration
+        +e.wrp
+            +input({
+                placeholder: "Nickname"
+            })
+            +input({
+                placeholder: "Your email address"
+            })
+            +input({
+                placeholder: "Password (10 character minimum)"
+            })
+            +input({
+                placeholder: "Repeat password"
+            })
+            +btn({
+                text: "Create account",
+                mod: "purple-static",
+                elem: "btn"
+            })
+            +btn({
+                text: "Continue with Facebook",
+                mod: "facebook",
+                elem: "btn"
+            })
+            +btn({
+                text: "Continue with Google",
+                mod: "google",
+                elem: "btn"
+            })
+            +e.policy
+                +e.checkbox
+                    +icon({
+                        name: "accept",
+                        class: "form__svg"
+                    })
+                +e.P.policy-text Restricted Region List: Botswana, Cambodia, Central African Republic, Democratic People’s Republic of Korea, Republic of Seychelles, Ethiopia, Ghana, Iran, Iraq, Libya, Somalia, South Sudan, Sri Lanka, Syria, Sudan, Thailand, Trinidad and Tobago, Tunisia, Venezuela, Yemen, and the United States of America (herein “Prohibited Jurisdictions”).
+

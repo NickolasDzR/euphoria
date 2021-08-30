@@ -1,0 +1,9 @@
+mixin whitelist(value = false)
+    +b.whitelist
+        +e.wrp
+            +e.P.text   #{value.heading}
+            +e.UL.list
+                each val, i in value.textItem
+                    +e.LI.item
+                        +e.P.text-item #{val}
+

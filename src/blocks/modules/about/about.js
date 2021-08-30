@@ -61,11 +61,13 @@ setTimeout(function () {
         new ScrollTrigger.create({
             trigger: item,
             onEnter: () => imgAnimation.play(),
-            start: () => `top+=${item.offsetHeight / 4} top+=${centerWidth()}`,
+            start: () => `top+= top+=${centerWidth()}`,
             end: () => `bottom bottom-=${centerWidth()}`,
             scrub: 1,
             invalidateOnRefresh: true,
         });
+
+        // start: () => `top+=${item.offsetHeight / 4} top+=${centerWidth()}`,
 
         const textAnimation = gsap.from(aboutTexts, {
             duration: .7,
@@ -77,7 +79,7 @@ setTimeout(function () {
         new ScrollTrigger.create({
             trigger: item,
             onEnter: () => textAnimation.play(),
-            start: () => `top+=${item.offsetHeight / 4} top+=${centerWidth()}`,
+            start: () => `top+= top+=${centerWidth()}`,
             end: () => `bottom bottom-=${centerWidth()}`,
             scrub: 1,
         })

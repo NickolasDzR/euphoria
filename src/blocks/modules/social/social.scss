@@ -3,12 +3,13 @@
     @include size(12);
     &__list {
         @media (min-width: $break_md) {
-            max-width: 576px;
+            max-width: 381px;
+            margin-bottom: 15px;
         }
         display: flex;
         align-items: center;
         justify-content: space-between;
-        max-width: 320px;
+        max-width: 230px;
         margin: 0 auto;
     }
     &__item {
@@ -19,8 +20,8 @@
         width: 36px;
         height: 36px;
         background: linear-gradient(143.34deg, #990094 21.33%, #61015E 64.16%);
-        border-radius: 50%;
         box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
+        border-radius: 50%;
         &:hover {
             box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
         }

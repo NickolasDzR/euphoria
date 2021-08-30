@@ -1,0 +1,65 @@
+extends layouts/default
+include helpers/mixins
+include ../blocks/modules/whitelist/whitelist
+include ../blocks/modules/form/form
+include ../blocks/components/input/input
+include ../blocks/components/btn/btn
+
+block variables
+    -
+        var
+                title = "Euphoria"
+        whiteList1 = [
+            "Seed sale will last 3 days (until 11:59PM, September 22nd)",
+            "Hard cap: $216000",
+            "Allocation per person: $10 - $5000",
+            "Price: 0.0002 BUSD per 1 $EUP token",
+            "Registration closes: 12AM, September 20th",
+            "Note! Your $EUP assets will be frozen, you will be able to unstake (take out) after 3 months."]
+        whiteList2 = [
+            "Euphoria -  Private Sale Whitelist",
+            "Private sale will last 3 days (until 11:59PM, October 12th)",
+            "Hard cap: $2160000",
+            "Allocation per person: $10 - $50000",
+            "Price: 0.0006 BUSD per 1 $EUP token",
+            "Registration closes: 12AM, October 10th",
+            "Note! Your $EUP assets will be frozen, you will be able to unstake (take out) 50% after 1 month and the remaining part after 2 months."
+        ]
+        whiteList3 = [
+            "Euphoria -  Public Sale Whitelist",
+            "Public sale will last 3 days (until 11:59PM, November 12th)",
+            "Hard cap: $864000",
+            "Allocation per person: $10 - $5000",
+            "Price: 0.0012 BUSD per 1 $EUP token",
+            "Registration closes: 12AM, November 10th",
+            "Note! Public Sale won’t take place if required hard cap sum will be collected during seed and private sales.",
+
+        ]
+
+block content
+    include ../../node_modules/bemto.pug/bemto.pug
+    +b.SECTION.whitelist-container
+        .container
+            .row
+                +e.H1.heading Welcome to Euphoria
+                +e.wrp
+                    +whitelist({
+                        heading: "Euphoria - Seed Sale Whitelist",
+                        textItem: whiteList1
+                    })
+                    +whitelist({
+                        heading: "Euphoria - Seed Sale Whitelist",
+                        textItem: whiteList2
+                    })
+                    +whitelist({
+                        heading: "Euphoria - Seed Sale Whitelist",
+                        textItem: whiteList3
+                    })
+                +e.form-wrp
+                    +form()
+    //+preload
+
+block scripts
+    script(src="js/manifest.js")
+    script(src="js/vendor.js")
+    script(src="js/index.js")

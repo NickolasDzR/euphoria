@@ -11,6 +11,7 @@ mixin roadmap(value = false)
                                     each slide, index in val.items
                                         +e.LI.item-slide
                                             +e.P.text #{slide}
+                                +e.dot(class= i % 2 === 0 ? "" : "_bottom")
                             - var imageType = i % 2 === 0 ? "union-bottom" : "union-top"
                             - var lineType = i % 2 === 0 ? "" : "_btn"
                             +e.line-wrp(class=lineType)

@@ -3,4 +3,13 @@ mixin btn(value = false)
         var
                 elem = value.elem ? "__" + value.elem : "";
                 mod = value.mod ? "_" + value.mod : "";
-    +b.BUTTON.button(class=mod class=elem type="submit") #{value.text}
+    if value.mod === "facebook"
+        +b.BUTTON.button_flex._img(class=mod class=elem type="submit")
+            +e.IMG.img(src="img/svg/facebook.svg")
+            |   #{value.text}
+    if value.mod === "google"
+        +b.BUTTON.button_flex._img(class=mod class=elem type="submit")
+            +e.IMG.img(src="img/svg/google.svg")
+            |   #{value.text}
+    if (value.mod !== "google" && value.mod !== "facebook")
+        +b.BUTTON.button(class=mod class=elem type="submit") #{value.text}

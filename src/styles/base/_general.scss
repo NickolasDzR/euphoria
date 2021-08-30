@@ -6,7 +6,6 @@ h1, h2, h3, h4, h5, h6, ul {
 html {
     scroll-behavior: smooth;
     max-width: 100%;
-    overflow-x: hidden;
 }
 
 body {
@@ -139,8 +138,8 @@ strong {
             }
             @media (min-width: $break_md) {
                 padding: {
-                    top: 0px;
-                    bottom: 0px;
+                    top: 0;
+                    bottom: 0;
                 }
             }
         }
@@ -148,14 +147,13 @@ strong {
 }
 
 .header {
-    display: none;
     @media (min-width: $break_md) {
         padding-right: 0;
         padding-left: 0;
         display: flex;
     }
     @media (min-width: $break_xl) {
-        height: 80px;
+        height: 70px;
         padding-top: 0;
         padding-bottom: 0;
     }
@@ -180,7 +178,7 @@ strong {
 
     &_hamburger {
         top: 11px;
-        left: 0px;
+        left: 0;
     }
 
     &__logo {
@@ -305,7 +303,6 @@ strong {
 
 .footer {
     padding: 35px 0 45px;
-    background-color: $font-black;
     @media(min-width: $break_md) {
         padding: 74px 0;
     }
@@ -327,7 +324,7 @@ strong {
     }
 
     &__soc {
-        margin-bottom: 40px;
+        margin-bottom: 15px;
     }
 
     &__copyright {
@@ -364,7 +361,73 @@ strong {
             line-height: 22px;
         }
     }
+
     &__reg-content {
         font-size: 9px;
+    }
+
+    &__message {
+        color: #fff;
+        font-size: 26px;
+        line-height: 32px;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+        @media (min-width: $break_md) {
+            margin-bottom: 30px;
+        }
+        @media (min-width: $break_lg) {
+            font-size: 36px;
+            line-height: 40px;
+        }
+    }
+}
+
+.whitelist-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: {
+        top: 45px;
+        bottom: 45px;
+    }
+    @media (min-width: $break_lg) {
+        padding: {
+            top: 85px;
+            bottom: 85px;
+        }
+    }
+
+    .row {
+        @media (min-width: $break_lg) {
+            align-items: flex-start;
+        }
+    }
+
+    &__wrp, &__form-wrp {
+        @include col();
+        @include size(12);
+        @include size-lg(6);
+    }
+
+    &__form-wrp {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__heading {
+        font-size: 42px;
+        font-weight: bold;
+        line-height: 48px;
+        width: 100%;
+        text-align: center;
+        color: #B903CB;
+        margin-bottom: 40px;
+        @media (min-width: $break_lg) {
+            margin-bottom: 70px;
+        }
     }
 }

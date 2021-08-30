@@ -1,5 +1,5 @@
 .howto {
-    margin-bottom: 400px;
+    margin-bottom: 150px;
 
     &__wrp {
         margin-bottom: 50px;
@@ -87,6 +87,11 @@
         .pin-spacer {
             margin-right: auto !important;
             margin-left: auto !important;
+        }
+        :not(.howto__item.howto__item_animation) {
+            .howto__line {
+                height: 55%;
+            }
         }
     }
 

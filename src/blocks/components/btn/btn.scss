@@ -11,6 +11,16 @@
     width: 100%;
     border-radius: 15px;
     text-transform: uppercase;
+    @media (min-width: $break_lg) {
+        font-size: 18px;
+        line-height: 21px;
+    }
+    &_img {
+        padding: {
+            top: 13px;
+            bottom: 13px;
+        }
+    }
     @media (min-width: $break_xxl) {
         padding: {
             top: 24px;
@@ -18,14 +28,46 @@
         }
         font-size: 18px;
     }
+
     &_purple {
         background: linear-gradient(275.46deg, #C51ED3 0%, #790084 102%);;
         transition: background .2s linear, color .2s linear;
         box-shadow: -4px -4px 15px rgba(97, 1, 94, 0.8), 10px 10px 15px rgba(0, 0, 0, 0.25), inset -0.5px -0.5px 0.5px #770083, inset 0.5px 0.5px 0.5px #BF1BCD;;
     }
+
+    &_purple-static {
+        background: none;
+        background-color: #A903B7;
+        text-transform: inherit;
+        box-shadow: inherit;
+    }
+
     &_border-radius {
         &_small {
             border-radius: 7px;
         }
+    }
+
+    &_facebook {
+        background: linear-gradient(0deg, #3776E6, #3776E6);
+        text-transform: inherit;
+        box-shadow: inherit;
+    }
+
+    &_google {
+        background: linear-gradient(0deg, #F8F8F8, #F8F8F8);
+        text-transform: inherit;
+        box-shadow: inherit;
+        color: #282828;
+    }
+    &__img {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+    }
+    &_flex {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }

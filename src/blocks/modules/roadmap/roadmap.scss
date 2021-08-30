@@ -1,6 +1,5 @@
 .roadmap {
-    height: 100vh;
-
+    margin-bottom: 50px;
     .container {
         padding: 0;
     }
@@ -10,8 +9,6 @@
     }
 
     &__splide {
-        //@include col();
-        //@include size(12);
         width: 100%;
     }
 
@@ -33,6 +30,10 @@
         @media (min-width: $break_xl) {
             font-size: 14px;
             line-height: 16px;
+        }
+        @media (min-width: $break_xxl) {
+            font-size: 16px;
+            line-height: 18px;
         }
     }
 
@@ -63,26 +64,54 @@
         justify-content: flex-end;
         position: relative;
         padding-bottom: 70px;
+        @media (min-width: $break_xl) {
+            width: 20%;
+            margin-bottom: auto;
+        }
         &_bottom {
-            margin-top: 30%;
+            @media (min-width: $break_xl) {
+                margin-top: auto;
+                margin-bottom: 0;
+                padding-bottom: 75px;
+            }
+            @media (min-width: $break_xxl) {
+                padding-bottom: 47px;
+            }
+            .roadmap__line-wrp {
+                @media (min-width: $break_xl) {
+                    background: linear-gradient(180deg, #9F19AB 0%, #D1B4E3 33.12%, #61015E 66.46%, rgba(209, 180, 227, 0) 100%);
+                    width: 3px;
+                    height: 320px;
+                    top: 0;
+                    position: absolute;
+                    left: 19px;
+                }
+                @media (min-width: $break_xxl) {
+                    height: 365px;
+                    top: 4px;
+                }
+            }
         }
     }
 
     &__line-wrp {
         display: flex;
         align-items: flex-start;
-        z-index: 1;
+        z-index: -1;
 
         position: relative;
         top: -20px;
         @media (min-width: $break_xl) {
-            background: linear-gradient(180deg, #9F19AB 0%, #D1B4E3 33.12%, #61015E 66.46%, rgba(209, 180, 227, 0) 100%);
+            background: linear-gradient(0deg, #9F19AB 0%, #D1B4E3 33.12%, #61015E 66.46%, rgba(209, 180, 227, 0) 100%);
             width: 3px;
             height: 320px;
 
-            top: 0;
+            top: -9px;
             position: absolute;
             left: 19px;
+        }
+        @media (min-width: $break_xxl) {
+            top: 13px;
         }
 
         &_btn {
@@ -111,16 +140,32 @@
         @media (min-width: $break_xl) {
             padding-left: 40px;
             justify-content: center;
+            position: relative;
         }
+        @media (min-width: $break_xxl) {
+            height: 350px;
+        }
+
         &_bottom {
             position: relative;
         }
     }
 
     &__title {
-        max-width: 185px;
+        max-width: 285px;
         width: 100%;
         text-align: left;
+        color: #9F19AB;
+        @media (min-width: $break_sm) {
+            max-width: 275px;
+        }
+        @media (min-width: $break_xl) {
+            max-width: none;
+        }
+        @media (min-width: $break_xxl) {
+            font-size: 52px;
+            line-height: 56px;
+        }
     }
 
     &__item-list {
@@ -135,7 +180,8 @@
         @media (min-width: $break_xl) {
             display: flex;
             align-items: flex-start;
-            height: 760px;
+            width: 100%;
+            height: 730px;
             &::before {
                 content: "";
                 background-image: url("../img/svg/union-full.svg");
@@ -143,13 +189,56 @@
                 background-repeat: no-repeat;
                 background-size: 100%;
                 background-position: top;
-                width: 100vw;
+                width: 106vw;
                 height: 78px;
                 position: absolute;
                 top: 47%;
                 bottom: 50%;
                 transform: translateY(-50%);
+                left: -3vw;
+                background-color: transparent;
+                overflow: hidden;
+                z-index: 1;
+
             }
+        }
+        @media (min-width: $break_xxl) {
+            height: 780px;
+        }
+    }
+
+    &__track {
+        @media (min-width: $break_xl) {
+            padding: {
+                right: 30px;
+                left: 30px;
+            }
+        }
+    }
+
+    &__dot {
+        display: none;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: linear-gradient(143.34deg, #990094 21.33%, #61015E 64.16%);
+
+        position: absolute;
+        left: 6px;
+        bottom: -14px;
+        z-index: 2;
+        @media (min-width: $break_xxl) {
+            bottom: 5px;
+        }
+        &_bottom {
+            top: -3px;
+            bottom: auto;
+            @media (min-width: $break_xxl) {
+                top: -9px;
+            }
+        }
+        @media (min-width: $break_xl) {
+            display: block;
         }
     }
 }

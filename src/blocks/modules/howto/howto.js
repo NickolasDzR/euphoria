@@ -107,6 +107,7 @@ setTimeout(function () {
             scaleY: 0,
             transformOrigin: "top center",
             ease: "none",
+            delay: .5,
         });
 
         const titleFromTop = (howtoTitle.querySelector(".howto__item-heading").offsetHeight / 2) + (howtoTitle.querySelector(".howto__item-text").offsetHeight / 2)
@@ -125,7 +126,9 @@ setTimeout(function () {
             scrub: true,
             start: () => "top+=" + titleFromTop + " center",
             end: () => "bottom-=" + titleFromTop + " center",
+            onLeave: self => self.kill(false, true),
             pin: true,
+            markers: true,
         })
 
     });

@@ -1,0 +1,87 @@
+.form {
+    background: #61015E;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 25px;
+    padding: 25px 15px;
+    width: 100%;
+    max-width: 510px;
+    @media (min-width: $break_sm) {
+        padding: 55px 35px;
+    }
+    @media (min-width: $break_lg) {
+        max-width: 720px;
+    }
+    @media (min-width: $break_xl) {
+        padding: 55px 55px;
+    }
+    @media (min-width: $break_xxl) {
+        padding: 55px 70px;
+    }
+
+
+    &__title {
+        width: 100%;
+        text-align: center;
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 33px;
+        color: white;
+        margin-bottom: 25px;
+        @media (min-width: $break_lg) {
+            font-size: 28px;
+            line-height: 33px;
+        }
+    }
+
+    &__btn {
+        margin-top: 15px;
+
+        &:first-of-type {
+            margin-top: 20px;
+            @media (min-width: $break_xl) {
+                margin-top: 30px;
+            }
+        }
+    }
+    &__policy {
+        display: flex;
+        align-items: center;
+        margin-top: 15px;
+    }
+    &__checkbox {
+        border: 1px solid #F7F7F7;
+        box-sizing: border-box;
+        border-radius: 3px;
+        width: 16px;
+        min-width: 16px;
+        height: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        cursor: pointer;
+        @media (min-width: $break_xl) {
+            width: 20px;
+            min-width: 20px;
+            height: 20px;
+        }
+    }
+    &__svg {
+        width: 11px;
+        height: 8px;
+        @media (min-width: $break_xl) {
+            width: 13px;
+            height: 10px;
+        }
+    }
+    &__policy-text {
+        font-weight: 300;
+        font-size: 10px;
+        line-height: 14px;
+        color: $white;
+        @media (min-width: $break_xl) {
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+}
